@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "khanto_adds",
     "rest_framework",
     "django_filters",
+    "django_extensions"
 ]
 
 MIDDLEWARE = [

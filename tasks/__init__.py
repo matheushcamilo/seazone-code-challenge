@@ -35,3 +35,11 @@ def dump_data(ctx):
 @task
 def runserver(ctx):
     run_command(ctx, "python manage.py runserver")
+
+
+@task
+def prepare_for_tests(ctx):
+    """Prepare the database for tests"""
+    run_command(ctx, "python manage.py reset_db --noinput")
+    run_command(ctx, "python manage.py migrate")
+    load_data(ctx)
