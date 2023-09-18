@@ -19,9 +19,12 @@ These are the APIs:
 - `/reservas/`
 - `/reservas/{id}`
 
+The database was set up using docker-compose, so it's easy to run the project locally.
+
 ## How to run
 - Clone this repository
 - Use `pip install -r requirements.txt` to install dependencies
 - Run `inv prepare-environment` to get the environment ready for the next 2 steps
-- Once the environment is ready, run `inv prepare-db-for-tests` to apply all migrations and test data
+- Once the environment is ready, run `inv prepare-db-for-tests` to apply all migrations and load test data
+- Run `inv runserver` to start the server and test the APIs yourself
 - Finally, run `inv run-tests` to run the unit tests
